@@ -1,0 +1,105 @@
+2017/07/31 20:31:43 [I] Starting Grafana
+2017/07/31 20:31:43 [I] Version: 2.5.0, Commit: v2.5.0+1-g287d8ca, Build date: 2015-10-28 14:13:28 +0530 IST
+2017/07/31 20:31:43 [I] Configuration Info
+Config files:
+  [0]: /root/grafana-2.5.0/conf/defaults.ini
+Paths:
+  home: /root/grafana-2.5.0
+  data: /root/grafana-2.5.0/data
+  logs: /root/grafana-2.5.0/data/log
+
+2017/07/31 20:31:43 [I] Database: sqlite3
+2017/07/31 20:31:43 [I] Migrator: Starting DB migration
+2017/07/31 20:31:43 [I] Migrator: exec migration id: create migration_log table
+2017/07/31 20:31:43 [I] Migrator: exec migration id: create user table
+2017/07/31 20:31:43 [I] Migrator: exec migration id: add unique index user.login
+2017/07/31 20:31:43 [I] Migrator: exec migration id: add unique index user.email
+2017/07/31 20:31:44 [I] Migrator: exec migration id: drop index UQE_user_login - v1
+2017/07/31 20:31:44 [I] Migrator: exec migration id: drop index UQE_user_email - v1
+2017/07/31 20:31:44 [I] Migrator: exec migration id: Rename table user to user_v1 - v1
+2017/07/31 20:31:44 [I] Migrator: exec migration id: create user table v2
+2017/07/31 20:31:44 [I] Migrator: exec migration id: create index UQE_user_login - v2
+2017/07/31 20:31:45 [I] Migrator: exec migration id: create index UQE_user_email - v2
+2017/07/31 20:31:45 [I] Migrator: exec migration id: copy data_source v1 to v2
+2017/07/31 20:31:45 [I] Migrator: exec migration id: Drop old table user_v1
+2017/07/31 20:31:45 [I] Migrator: exec migration id: create temp user table v1-7
+2017/07/31 20:31:45 [I] Migrator: exec migration id: create index IDX_temp_user_email - v1-7
+2017/07/31 20:31:46 [I] Migrator: exec migration id: create index IDX_temp_user_org_id - v1-7
+2017/07/31 20:31:46 [I] Migrator: exec migration id: create index IDX_temp_user_code - v1-7
+2017/07/31 20:31:46 [I] Migrator: exec migration id: create index IDX_temp_user_status - v1-7
+2017/07/31 20:31:46 [I] Migrator: exec migration id: create star table
+2017/07/31 20:31:47 [I] Migrator: exec migration id: add unique index star.user_id_dashboard_id
+2017/07/31 20:31:47 [I] Migrator: exec migration id: create org table v1
+2017/07/31 20:31:47 [I] Migrator: exec migration id: create index UQE_org_name - v1
+2017/07/31 20:31:47 [I] Migrator: exec migration id: create org_user table v1
+2017/07/31 20:31:48 [I] Migrator: exec migration id: create index IDX_org_user_org_id - v1
+2017/07/31 20:31:48 [I] Migrator: exec migration id: create index UQE_org_user_org_id_user_id - v1
+2017/07/31 20:31:48 [I] Migrator: exec migration id: copy data account to org
+2017/07/31 20:31:48 [I] Migrator: skipping migration id: copy data account to org, condition not fulfilled
+2017/07/31 20:31:48 [I] Migrator: exec migration id: copy data account_user to org_user
+2017/07/31 20:31:48 [I] Migrator: skipping migration id: copy data account_user to org_user, condition not fulfilled
+2017/07/31 20:31:48 [I] Migrator: exec migration id: Drop old table account
+2017/07/31 20:31:48 [I] Migrator: exec migration id: Drop old table account_user
+2017/07/31 20:31:49 [I] Migrator: exec migration id: create dashboard table
+2017/07/31 20:31:49 [I] Migrator: exec migration id: add index dashboard.account_id
+2017/07/31 20:31:49 [I] Migrator: exec migration id: add unique index dashboard_account_id_slug
+2017/07/31 20:31:49 [I] Migrator: exec migration id: create dashboard_tag table
+2017/07/31 20:31:49 [I] Migrator: exec migration id: add unique index dashboard_tag.dasboard_id_term
+2017/07/31 20:31:50 [I] Migrator: exec migration id: drop index UQE_dashboard_tag_dashboard_id_term - v1
+2017/07/31 20:31:50 [I] Migrator: exec migration id: Rename table dashboard to dashboard_v1 - v1
+2017/07/31 20:31:50 [I] Migrator: exec migration id: create dashboard v2
+2017/07/31 20:31:50 [I] Migrator: exec migration id: create index IDX_dashboard_org_id - v2
+2017/07/31 20:31:51 [I] Migrator: exec migration id: create index UQE_dashboard_org_id_slug - v2
+2017/07/31 20:31:51 [I] Migrator: exec migration id: copy dashboard v1 to v2
+2017/07/31 20:31:51 [I] Migrator: exec migration id: drop table dashboard_v1
+2017/07/31 20:31:51 [I] Migrator: exec migration id: alter dashboard.data to mediumtext v1
+2017/07/31 20:31:52 [I] Migrator: exec migration id: create data_source table
+2017/07/31 20:31:52 [I] Migrator: exec migration id: add index data_source.account_id
+2017/07/31 20:31:52 [I] Migrator: exec migration id: add unique index data_source.account_id_name
+2017/07/31 20:31:52 [I] Migrator: exec migration id: drop index IDX_data_source_account_id - v1
+2017/07/31 20:31:52 [I] Migrator: exec migration id: drop index UQE_data_source_account_id_name - v1
+2017/07/31 20:31:53 [I] Migrator: exec migration id: Rename table data_source to data_source_v1 - v1
+2017/07/31 20:31:53 [I] Migrator: exec migration id: create data_source table v2
+2017/07/31 20:31:53 [I] Migrator: exec migration id: create index IDX_data_source_org_id - v2
+2017/07/31 20:31:53 [I] Migrator: exec migration id: create index UQE_data_source_org_id_name - v2
+2017/07/31 20:31:54 [I] Migrator: exec migration id: copy data_source v1 to v2
+2017/07/31 20:31:54 [I] Migrator: exec migration id: Drop old table data_source_v1 #2
+2017/07/31 20:31:54 [I] Migrator: exec migration id: create api_key table
+2017/07/31 20:31:54 [I] Migrator: exec migration id: add index api_key.account_id
+2017/07/31 20:31:54 [I] Migrator: exec migration id: add index api_key.key
+2017/07/31 20:31:55 [I] Migrator: exec migration id: add index api_key.account_id_name
+2017/07/31 20:31:55 [I] Migrator: exec migration id: drop index IDX_api_key_account_id - v1
+2017/07/31 20:31:56 [I] Migrator: exec migration id: drop index UQE_api_key_key - v1
+2017/07/31 20:31:56 [I] Migrator: exec migration id: drop index UQE_api_key_account_id_name - v1
+2017/07/31 20:31:56 [I] Migrator: exec migration id: Rename table api_key to api_key_v1 - v1
+2017/07/31 20:31:56 [I] Migrator: exec migration id: create api_key table v2
+2017/07/31 20:31:56 [I] Migrator: exec migration id: create index IDX_api_key_org_id - v2
+2017/07/31 20:31:57 [I] Migrator: exec migration id: create index UQE_api_key_key - v2
+2017/07/31 20:31:57 [I] Migrator: exec migration id: create index UQE_api_key_org_id_name - v2
+2017/07/31 20:31:57 [I] Migrator: exec migration id: copy api_key v1 to v2
+2017/07/31 20:31:57 [I] Migrator: exec migration id: Drop old table api_key_v1
+2017/07/31 20:31:58 [I] Migrator: exec migration id: create dashboard_snapshot table v4
+2017/07/31 20:31:58 [I] Migrator: exec migration id: drop table dashboard_snapshot_v4 #1
+2017/07/31 20:31:58 [I] Migrator: exec migration id: create dashboard_snapshot table v5 #2
+2017/07/31 20:31:58 [I] Migrator: exec migration id: create index UQE_dashboard_snapshot_key - v5
+2017/07/31 20:31:58 [I] Migrator: exec migration id: create index UQE_dashboard_snapshot_delete_key - v5
+2017/07/31 20:31:59 [I] Migrator: exec migration id: create index IDX_dashboard_snapshot_user_id - v5
+2017/07/31 20:31:59 [I] Migrator: exec migration id: alter dashboard_snapshot to mediumtext v2
+2017/07/31 20:31:59 [I] Migrator: exec migration id: create quota table v1
+2017/07/31 20:31:59 [I] Migrator: exec migration id: create index UQE_quota_org_id_user_id_target - v1
+2017/07/31 20:32:00 [I] Created default admin user: admin
+2017/07/31 20:32:00 [I] Listen: http://0.0.0.0:3000
+2017/07/31 20:33:02 [I] Completed / 302 Found in 399.061µs
+2017/07/31 20:34:27 [I] Completed /metrics/find 500 Internal Server Error in 351.316937ms
+2017/07/31 20:40:35 [I] Completed /logout 302 Found in 427.974µs
+2017/07/31 20:40:39 [I] Completed /api/dashboards/home 401 Unauthorized in 344.151µs
+2017/07/31 20:40:39 [I] Completed /api/login/ping 401 Unauthorized in 247.39µs
+2017/07/31 20:40:40 [I] Completed /api/datasources 401 Unauthorized in 338.709µs
+2017/07/31 20:40:40 [I] Completed /api/login/ping 401 Unauthorized in 299.59µs
+2017/07/31 20:40:41 [I] Completed /api/datasources/plugins 401 Unauthorized in 335.241µs
+2017/07/31 20:40:41 [I] Completed /api/login/ping 401 Unauthorized in 347.738µs
+2017/07/31 20:40:41 [I] Completed /api/datasources/plugins 401 Unauthorized in 242.204µs
+2017/07/31 20:40:41 [I] Completed /api/login/ping 401 Unauthorized in 270.647µs
+2017/07/31 20:40:42 [I] Completed /api/datasources 401 Unauthorized in 349.687µs
+2017/07/31 20:40:42 [I] Completed /api/login/ping 401 Unauthorized in 308.027µs
+2017/07/31 21:06:37 [I] Received signal interrupt. shutting down
