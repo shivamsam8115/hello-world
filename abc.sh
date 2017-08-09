@@ -1,4 +1,5 @@
-#/bin/bash/
+#!/bin/bash
+whoami
 echo "enter two numbers to add welcom"
 /tmp/testp.sh >> /home/shivam/hello-world/abc.log
 cat /home/shivam/hello-world/abc.log
